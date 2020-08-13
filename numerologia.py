@@ -3,6 +3,9 @@ from re import sub
 def remove_caract_espec(nome):
   novo_nome = sub(r'[ãáàâä]', 'a', nome)
   novo_nome = sub(r'[õóòôö]', 'o', novo_nome)
+  novo_nome = sub(r'[éèêë]', 'e', novo_nome)
+  novo_nome = sub(r'[íìîï]', 'i', novo_nome)
+  novo_nome = sub(r'[úùûü]', 'u', novo_nome)
   return novo_nome
 
 def calcula_nome(nome):
